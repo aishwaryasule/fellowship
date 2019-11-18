@@ -1,8 +1,15 @@
 package com.bridgelabz.fellowshipprogram.utility;
 import java.util.*;
+import java.io.*;
 public class Utility 
 {
-	static Scanner sc=new Scanner(System.in); 
+	static Scanner sc=new Scanner(System.in);
+	private static int y;
+	public static boolean InputBoolean()
+	{
+		return sc.nextBoolean(); 
+			
+	}
 	public static int InputInteger()
 	{
 		return sc.nextInt();
@@ -491,59 +498,270 @@ public class Utility
 		}
 				
 	}
+	//******************************Junit programming********************************************//
 	
+	public static int wendingmachine(int notes[],int notecounter[],int amount)
+	{
+		 int notescounter[]=new int[9];
+	      int len=notes.length;
+	      System.out.println("enter the amount");
+	   	  amount=sc.nextInt();
+	   	  System.out.println(amount);
+	       for(int i=0;i<9;i++)
+	       {
+	    	  if(amount>=notes[i])
+	    	 {
+	    	      notescounter[i]=amount/notes[i];
+	    	      amount=amount-notescounter[i]*notes[i];
+	    	  }
+	    	  else
+	    	  {  
+	    		  notescounter[i]=notes[len-1];
+	    	  }
+	    	   
+	       }
+	       System.out.println("count of notes");
+	       for(int i=0;i<9;i++)
+	       {
+	    	   System.out.println(notescounter[i]+ ":" +notes[i]);
+	    	   
+	       }
+	       return len;
+	}
+	public static int ferenhitetemp(int c)
+	{
+		int f;
+		f=(c*9/5)+32;
+		System.out.println(f);
+		return f;
+	}
+	public static int celciustemp(int f)
+	{
+		int c;
+		c=(f-32)*5/9;
+		System.out.println(c);
+		return c;
+	}
 	
+	public static  double monthlypayement(double interest,double year,double principal)
+	{
+		  double payment;
+		  interest = interest/(12*100);
+		 year=year*12;
+		 payment = ((principal*interest*Math.pow(1+interest, year))/(Math.pow(1+interest,year)-1));
+		 System.out.println("monthly payment is" +payment);
+		 return payment;
+	}
 	
- }
+	public static String tobinary(int n)
+	{
+       int result;
+	   String a=" ";
+	   while(n>0)
+	   {
+		    result=n%2;
+		     a=result+ " " +a;
+		     n=n/2;
+				  
+	   }
+	   System.out.println(a);
+	     
+
+	    return a;
+	    
+		
+	}
+	public static double sqrt_newton(double n)
+	{
+		
+		double eps=1e-15;
+		double x=1;
+		for(;;)
+		{
+			double nx=(x+n/x)/2;
+			if(Math.abs(x-nx)<eps)
+				break;
+			x=nx;
+		}
+		
+		System.out.println(x);
+	 return x;
+	}
+
+	public static int dayofweek(int m,int d,int years)
+	{
+		int d1=0;
+		if((m>=1 && m<=12) && (d>=1 && d<=31))
+		{
+			years=y-(14-m)/12;
+			int temp=years+(years/4)-(years/100)+(years/400);
+		    int	months=m+12*((14-m)/12)-2;
+		    d1=(d+temp+31*months/12)%7;
+			
+		}
+		else
+		{
+			System.out.println("enter input is invalid");
 	
+	}
+		switch(d1)
+		{
+			case 0:
+				System.out.println("Sunday");
+				break;
+			case 1:
+				System.out.println("Monday");
+				break;
+			case 2:
+				System.out.println("Tuesday");
+				break;
+			case 3:
+				System.out.println("Wednesday");
+				break;
+			case 4:
+				System.out.println("Thursday");
+				break;
+			case 5:
+				System.out.println("Friday");
+				break;
+			case 6:
+				System.out.println("Saturday");
+				break;
+		}
+		return 0;
+   }
 	
+	 public static int[] swapBinaryNum(String result[])
+	{
+		String arr1[]=new String[4];
+		String arr2[]=new String[4];
+		String newbinary[]=new String[8];
+		for(int i=0;i<4;i++)
+		{
+			arr1[i]=result[i];
+		}
+		int j=0;
+		for(int i=4;i<8;i++)
+		{
+			arr2[j]=result[i];
+			j++;
+		}	
+		for(int i=0;i<4;i++)
+		{
+			newbinary[i]=arr2[i];
+		}
+		j=0;
+		for(int i=4;i<8;i++)
+		{		
+			newbinary[i]=arr1[j];
+			j++;
+		}
+		System.out.print("\n After Swapping binary number is=");
+	    for(int i=0;i<8;i++)
+		{
+			System.out.print(newbinary[i]);
+		}
+		return null;
+		
+}
+	 
+// **************************************Data structue****************************************//	 
 	
+	 static class stack
+		{
+			char[] items=new char[100];
+			char x;
+			int top=-1;
+			void push()
+			{
+				if(top==99)
+				{
+					System.out.println("stack is overflow");
+				}
+				else
+				{
+					items[++top]=x;
+				}
+			}
+			char pop()
+			{
+				if(top==-1)
+				{
+					System.out.println("underflow error");
+					return  '\0';
+				}
+				else
+				{
+					char elements=items[top];
+					top--;
+					return elements;
+				}
+			}	
+					
+		  
+		 boolean isEmpty()
+		{
+			 return(top==-1)?true:false;
+			
+	   }
+ }				
+	public static boolean ismatchingpair(char character1,char character2)	
+	{
+		  if(character1=='{'||  character2=='}') 
+		  {
+			  return true;
+		  }
+		  else if(character1=='[' || character2==']')
+		  {
+			  return true;
+		  }
+		  else if(character1=='(' || character2==')')
+		  {
+			  return true;
+		  }
+		  else 
+		  {
+			  return false;
+		  }
+	}
 	
-
+	public static boolean areparenthesisbalance(char exp[])
+	{
+		Stack st=new Stack();
+		for(int i=0;i<=exp.length;i++)
+		{
+			if(exp[i]=='{' || exp[i]=='['|| exp[i]=='(')
+			{
+				st.push(exp[i]);
+			}
+		   else
+           {
+			  if(exp[i]=='}' || exp[i]==']' || exp[i]==')' )
+			  {
+				  char temp=exp[i];
+				  if(st.isEmpty())
+				  {
+					  return false;	  
+				  }
+				  else if(!ismatchingpair((char) st.pop(),temp))
+				 {
+					  return false;
+				 }
+			  }
+		   }
+			if(st.isEmpty())
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+	    }
+		return true;		
+	}
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
