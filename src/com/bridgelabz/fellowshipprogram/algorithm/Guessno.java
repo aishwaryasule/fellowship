@@ -1,5 +1,11 @@
 package com.bridgelabz.fellowshipprogram.algorithm;
-
+/**
+* @author Aishwarya Sule
+* @date 13/11/2019
+* @purpose take one number in mind and use binary search algorithm 
+*          to guess the entered number
+*
+*/
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 
 public class Guessno 

@@ -1,5 +1,11 @@
 package com.bridgelabz.fellowshipprogram.algorithm;
-
+/**
+* @author aishwaryasule
+* @date 14/11/2019
+* @purpose to check wathor user entered string have same number of
+*           of characters in it or not
+*
+*/
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 
 public class Anagram 

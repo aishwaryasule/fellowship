@@ -2,9 +2,10 @@ package com.bridgelabz.fellowshipprogram.algorithm;
 
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 /**
- * @author aishwaryasule
+ * @author Aishwarya Sule
  * @date   13/11/2019
- * @purpose fellowship programs
+ * @purpose one of the sorting algorithm to search and sort element 
+ *          and display
  *
  */
 public class Insertionsort 

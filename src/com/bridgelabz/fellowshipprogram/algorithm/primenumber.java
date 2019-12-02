@@ -1,5 +1,12 @@
 package com.bridgelabz.fellowshipprogram.algorithm;
 
+/**
+* @author Aishwarya Sule
+* @date 13/11/2019
+* @purpose By taking range from 0 to 1000 program give 0-1000
+*          in range prime number
+*
+*/
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 
 public class primenumber 

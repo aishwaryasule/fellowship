@@ -1,5 +1,11 @@
 package com.bridgelabz.fellowshipprogram.algorithm;
-
+/**
+* @author Aishwarya Sule
+* @date 13/11/2019
+* @purpose one type sorting algorithm used to sort the elements 
+*          ascending order
+*
+*/
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 
 public class Bubblesort 

@@ -1,5 +1,10 @@
 package com.bridgelabz.fellowshipprogram.functional;
-
+/**
+* @author aishwaryasule
+* @date 13/11/2019
+* @purpose fellowship programs
+*
+*/
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 
 public class Quadratic 

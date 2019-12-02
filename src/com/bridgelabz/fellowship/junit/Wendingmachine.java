@@ -1,5 +1,11 @@
 package com.bridgelabz.fellowship.junit;
 
+/**
+* @author aishwaryasule
+* @date 13/11/2019
+* @purpose fellowship programs
+*
+*/
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 
 public class Wendingmachine 

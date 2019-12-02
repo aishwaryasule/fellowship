@@ -1,5 +1,10 @@
 package com.bridgelabz.fellowshipprogram.algorithm;
-
+/**
+* @author Aishwarya Sule
+* @date 13/11/2019
+* @purpose  one of sorting algorithm that use divide and conquer strategy
+*
+*/
 import java.util.Arrays;
 
 import com.bridgelabz.fellowshipprogram.utility.Utility;

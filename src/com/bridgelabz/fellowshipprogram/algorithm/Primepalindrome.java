@@ -1,5 +1,10 @@
 package com.bridgelabz.fellowshipprogram.algorithm;
-
+/**
+* @author Aishwarya Sule
+* @date 13/11/2019
+* @purpose program to check both the prime and palindrome of the number.
+*
+*/
 import com.bridgelabz.fellowshipprogram.utility.Utility;
 
 public class Primepalindrome 
